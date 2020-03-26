@@ -1,10 +1,23 @@
 import React from 'react';
 
+import { Switch, Route } from 'react-router-dom';
+import Home from './components/Home';
+
 function App() {
   return (
-    <div>
-      <h1>Spotify Song Suggester</h1>
-    </div>
+    <>
+      <Switch>
+        <Route path="/">
+          <Home />
+        </Route>
+        <Route path="/profile">
+          <h1>Profile</h1>
+        </Route>
+        <Route path="/profile">
+          <h1>Profile</h1>
+        </Route>
+      </Switch>
+    </>
   );
 }
 
