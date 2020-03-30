@@ -6,9 +6,6 @@ import { BrowserRouter as Router } from 'react-router-dom';
 
 import './reset.css';
 
-// Route
-import { BrowserRouter as Router } from 'react-router-dom';
-
 // Redux
 import { Provider } from 'react-redux';
 import { createStore } from 'redux';
