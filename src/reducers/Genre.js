@@ -13,6 +13,14 @@ const Div = styled.div`
   border: solid;
   margin: 10px;
   text-decoration: none;
+  background: gray;
+  color: white;
+  font-weight: 700;
+  opacity: 0.4;
+
+  &:hover {
+    opacity: 1;
+  }
 `;
 
 const Genre = (props) => {
