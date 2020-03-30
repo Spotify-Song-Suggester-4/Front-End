@@ -1,8 +1,12 @@
+// Create React App
 import React from 'react';
 import ReactDOM from 'react-dom';
 import App from './App';
 import { BrowserRouter as Router } from 'react-router-dom';
 
+import './reset.css';
+
+// Redux
 import { Provider } from 'react-redux';
 import { createStore } from 'redux';
 import spotifyApp from './reducers';
