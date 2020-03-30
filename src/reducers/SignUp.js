@@ -3,6 +3,28 @@ import { useForm } from 'react-hook-form';
 import { Link } from 'react-router-dom';
 import api from './utilities/Api';
 import useInput from './useInput';
+import styled from 'styled-components';
+
+export const Div = styled.div`
+  background: linear-gradient(
+    180deg,
+    rgba(185, 49, 107, 1) 0%,
+    rgba(121, 48, 113, 1) 54%,
+    rgba(52, 47, 120, 1) 100%
+  );
+
+  display: flex;
+  align-items: center;
+  justify-content: center;
+
+  width: 100vw;
+  height: 100vh;
+  color: white;
+`;
+export const Form = styled.form`
+  display: flex;
+  flex-direction: column;
+`;
 
 const SignUp = (props) => {
   const { register, errors, handleSubmit } = useForm();
@@ -27,8 +49,8 @@ const SignUp = (props) => {
       });
   };
   return (
-    <div>
-      <form onSubmit={handleSubmit(onSubmit)}>
+    <Div>
+      <Form onSubmit={handleSubmit(onSubmit)}>
         <label>username</label>
         <input
           type="text"
@@ -51,8 +73,8 @@ const SignUp = (props) => {
         <h4>
           already have an account?<Link to="/Login">log in here</Link>
         </h4>
-      </form>
-    </div>
+      </Form>
+    </Div>
   );
 };
 

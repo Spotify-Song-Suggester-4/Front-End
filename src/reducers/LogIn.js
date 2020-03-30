@@ -3,6 +3,7 @@ import { useForm } from 'react-hook-form';
 import { Link } from 'react-router-dom';
 import api from './utilities/Api';
 import useInput from './useInput';
+import { Form, Div } from './SignUp';
 
 const LogIn = (props) => {
   const { register, errors, handleSubmit } = useForm();
@@ -29,8 +30,8 @@ const LogIn = (props) => {
       });
   };
   return (
-    <div>
-      <form onSubmit={handleSubmit(onSubmit)}>
+    <Div>
+      <Form onSubmit={handleSubmit(onSubmit)}>
         <label>username</label>
         <input
           type="text"
@@ -52,8 +53,8 @@ const LogIn = (props) => {
         <button>submit</button>
         <Link>forgot password?</Link>
         <Link to="/signup">sign up</Link>
-      </form>
-    </div>
+      </Form>
+    </Div>
   );
 };
 
